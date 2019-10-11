@@ -1,0 +1,10 @@
+CREATE DEFINER=`DBMS`@`localhost` PROCEDURE `Update_Sales`(IN Prod_Name1 char(50),
+IN Prod_Qty1 varchar(11),
+IN Prod_Price1 varchar(4), 
+IN Prod_Type1 varchar(100),
+IN Product_ID1 varchar(5))
+BEGIN
+UPDATE Sales_product
+SET Prod_Name = Prod_Name1, Prod_Qty = Prod_Qty1, Prod_Price = Prod_price1, Product_Type = Prod_Type1
+WHERE Product_ID = Product_ID1;
+END

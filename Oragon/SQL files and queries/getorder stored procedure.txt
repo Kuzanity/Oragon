@@ -1,0 +1,4 @@
+CREATE DEFINER=`DBMS`@`localhost` PROCEDURE `getorder`()
+BEGIN
+select * from sales_order;
+END

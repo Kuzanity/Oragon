@@ -1,0 +1,14 @@
+--Function initialization called in the stored procedure
+CREATE DEFINER=`DBMS`@`localhost` FUNCTION `User_authentication`(Admin_user char(50),password varchar(50)) RETURNS int(11)
+BEGIN
+IF EXISTS(Select Admin_user, password from login_regis where Admin_User=Admin_user and password=password) then
+RETURN 1;
+else
+return 0;
+END if;
+END
+
+CREATE DEFINER=`DBMS`@`localhost` PROCEDURE `login`(IN Admin_user char(50),IN password varchar(50))
+BEGIN
+select User_authentication(Admin_user,password);
+END

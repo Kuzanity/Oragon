@@ -1,0 +1,15 @@
+CREATE DEFINER=`DBMS`@`localhost` PROCEDURE `Insertrow_Sales`(
+IN Product_ID varchar(5),
+IN Prod_Name char(50),
+IN Prod_Qty varchar(11),
+IN Prod_Price varchar(4), 
+IN Prod_Type varchar(100)
+)
+BEGIN
+
+INSERT INTO Sales_Product
+(Product_ID, Prod_Name, Prod_Qty, Prod_Price, Product_Type)
+VALUES
+(Product_ID, Prod_Name, Prod_Qty, Prod_Price, Prod_Type);
+	
+END

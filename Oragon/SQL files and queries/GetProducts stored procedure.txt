@@ -1,0 +1,4 @@
+CREATE DEFINER=`DBMS`@`localhost` PROCEDURE `GetProducts`()
+begin
+select* from SALES_Product;
+end
